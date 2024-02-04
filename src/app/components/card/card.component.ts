@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { ICardItem } from '../../interfaces/card-item.interface';
+import { IItem } from 'app/interfaces';
 
 @Component({
   selector: 'app-card',
@@ -10,5 +10,5 @@ import { ICardItem } from '../../interfaces/card-item.interface';
   styleUrl: './card.component.scss',
 })
 export class CardComponent {
-  @Input() item!: ICardItem;
+  @Input() item!: IItem;
 }

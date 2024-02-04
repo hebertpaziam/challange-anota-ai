@@ -1,0 +1,11 @@
+<header>
+  <app-navbar></app-navbar>
+</header>
+
+<main>
+  <app-search></app-search>
+
+  @for (item of items; track $index) {
+  <app-card [item]="item"></app-card>
+  }
+</main>
