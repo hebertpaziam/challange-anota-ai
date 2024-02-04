@@ -25,6 +25,9 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets"],
             "styles": ["src/assets/styles/main.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/styles"]
+            },
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -64,6 +67,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {},
           "configurations": {
             "production": {
               "buildTarget": "challenge-anota-ai:build:production"
