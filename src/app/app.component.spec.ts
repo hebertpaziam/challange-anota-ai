@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'challange-anota-ai' title`, () => {
+  it(`should have the 'challenge-anota-ai' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('challange-anota-ai');
+    expect(app.title).toEqual('challenge-anota-ai');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, challange-anota-ai');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, challenge-anota-ai');
   });
 });
