@@ -1,4 +1,10 @@
 :root {
-  --color-primary-500: #009aff;
-  --color-gray-500: #efefef;
+  --color-primary-50: #009aff;
+  --color-neutral-100: #ffffff;
+  --color-neutral-50: #efefef;
+  --color-neutral-30: #7e7981;
+}
+
+* {
+  font-family: 'Roboto', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

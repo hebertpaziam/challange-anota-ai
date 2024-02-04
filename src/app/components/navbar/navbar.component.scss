@@ -1,1 +1,56 @@
 @import "toolbox";
+
+:host {
+  position: relative;
+  display: flex;
+  height: 72px;
+  margin-bottom: 1rem;
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: $color-neutral-100;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 0.5rem;
+
+      .username {
+        position: relative;
+        display: inline-block;
+        width: fit-content;
+        padding: 0rem 3.5rem 0 1rem;
+        z-index: 1;
+
+        &:before {
+          border-top: 1px solid $color-neutral-30;
+          content: "";
+          margin: 0 auto; /* this centers the line to the full width specified */
+          position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+          top: 50%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          z-index: -1;
+        }
+
+        span {
+          padding: 0 .5rem;
+          color: $color-neutral-30;
+          font-size: 0.825rem;
+          font-style: italic;
+          background: $color-neutral-100;
+
+        }
+      }
+    }
+  }
+}
