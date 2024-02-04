@@ -1,6 +1,10 @@
 {
   "name": "challenge-anota-ai",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": "20.3.0",
+    "npm": "9.6.7"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
