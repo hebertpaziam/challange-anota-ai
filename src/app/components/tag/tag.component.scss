@@ -2,11 +2,11 @@
 
 :host {
   display: inline-flex;
-  padding: 0.15rem 0.25rem;
-  border-radius: 5px;
+  padding: 0.10rem 0.25rem;
+  border-radius: 3px;
   color: $color-neutral-100;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.5rem;
+  font-weight: 900;
 
   &.-landscape {
     background-color: $color-type-landscape-50;

@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   width: 180px;
+  height: 282px;
   border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 
   .header {
     position: relative;
@@ -25,23 +27,44 @@
       bottom: 4px;
       right: 4px;
     }
+
+    .close {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: -10px;
+      right: -10px;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+      color: $color-neutral-30;
+      cursor: pointer;
+      border: 1px solid $color-neutral-50;
+      box-shadow: -1px 1px 5px 2px rgba(200, 200, 200, 0.5);
+    }
   }
 
   .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
     padding: 0.5rem;
     background-color: $color-neutral-100;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 
     .title {
+      font-size: 1.25rem;
     }
     .description {
       display: -webkit-box;
-      max-width: 100%;
       -webkit-line-clamp: 8;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      font-size: 0.825rem;
+      font-size: 0.75rem;
+      line-height: normal;
     }
   }
 }
