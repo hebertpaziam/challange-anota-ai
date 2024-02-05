@@ -3,6 +3,7 @@ module.exports = {
   setupFilesAfterEnv: ["<rootDir>/setup-jest.ts"],
   moduleNameMapper: {
     "^app/(.*)$": "<rootDir>/src/app/$1",
+    "^mocks/(.*)$": "<rootDir>/src/mocks/$1",
     "^environment$": "<rootDir>/src/environments/environment.ts",
   },
   transform: {

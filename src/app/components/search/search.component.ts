@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { debounceTime, Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -18,7 +18,7 @@ export class SearchComponent {
 
   ngOnInit() {
     this.termSubject
-      .pipe(debounceTime(300))
+      .pipe(distinctUntilChanged(), debounceTime(300))
       .subscribe((term) => this.onSearch.emit(term));
   }
 
@@ -28,6 +28,6 @@ export class SearchComponent {
 
   performSearch(value: string) {
     this.term.set(value);
-    this.termSubject.next(this.term());
+    this.termSubject.next(value);
   }
 }

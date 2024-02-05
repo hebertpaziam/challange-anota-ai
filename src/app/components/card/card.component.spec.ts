@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { ItemMock } from 'mocks/item.mock';
+
 import { CardComponent } from './card.component';
 
 describe('CardComponent', () => {
@@ -13,10 +15,17 @@ describe('CardComponent', () => {
 
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
+    component.item = ItemMock()
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  test('should emit "onRemove" event', () => {
+    const onRemoveSpy = jest.spyOn(component.onRemove, 'emit');
+    component.removeItem();
+    expect(onRemoveSpy).toHaveBeenCalledTimes(1);
   });
 });
