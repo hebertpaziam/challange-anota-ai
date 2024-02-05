@@ -42,6 +42,13 @@
       cursor: pointer;
       border: 1px solid $color-neutral-50;
       box-shadow: -1px 1px 5px 2px rgba(200, 200, 200, 0.5);
+      transition: all 100ms linear;
+
+      &:hover {
+        transform: rotate(-90deg);
+        color: $color-danger-50;
+        border-color: $color-neutral-20;
+      }
     }
   }
 
