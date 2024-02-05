@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { debounceTime, Subject } from 'rxjs';
 
@@ -14,7 +14,7 @@ export class SearchComponent {
 
   private termSubject = new Subject<string>();
 
-  term: string = '';
+  term = signal('');
 
   ngOnInit() {
     this.termSubject
@@ -26,7 +26,8 @@ export class SearchComponent {
     this.termSubject.complete();
   }
 
-  performSearch() {
-    this.termSubject.next(this.term);
+  performSearch(value: string) {
+    this.term.set(value);
+    this.termSubject.next(this.term());
   }
 }
