@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  app-search {
+    margin: 1.5rem;
+    width: 50%;
+  }
+
+  .cardlist {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 25px;
+  }
+}

@@ -1,11 +1,9 @@
-<header>
-  <app-navbar></app-navbar>
-</header>
+<app-search></app-search>
 
-<main>
-  <app-search></app-search>
-
+<ul class="cardlist">
   @for (item of items; track $index) {
-  <app-card [item]="item"></app-card>
+  <li>
+    <app-card [item]="item"></app-card>
+  </li>
   }
-</main>
+</ul>

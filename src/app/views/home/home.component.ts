@@ -1,14 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
-import { CardComponent, NavbarComponent, SearchComponent } from 'app/components';
+import { CardComponent, SearchComponent } from 'app/components';
 import { IItem } from 'app/interfaces';
 import { ItemService } from 'app/services';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, SearchComponent, CardComponent, CommonModule],
+  imports: [SearchComponent, CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
