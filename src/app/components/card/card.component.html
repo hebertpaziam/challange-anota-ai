@@ -1,1 +1,16 @@
-<p>card works! {{item | json}}</p>
+<div class="header">
+  <img
+    class="poster"
+    [src]="item.img"
+    [alt]="'image related to ' + item.title"
+  />
+  <app-tag [type]="item.type"></app-tag>
+</div>
+<div class="content">
+  <p class="title">
+    <strong>{{ item.title }}</strong>
+  </p>
+  <p class="description" [title]="item.description">
+    {{ item.description }}
+  </p>
+</div>

@@ -1,0 +1,20 @@
+@import "toolbox";
+
+:host {
+  display: inline-flex;
+  padding: 0.15rem 0.25rem;
+  border-radius: 5px;
+  color: $color-neutral-100;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  &.-landscape {
+    background-color: $color-type-landscape-50;
+  }
+  &.-flower {
+    background-color: $color-type-flower-50;
+  }
+  &.-pizza {
+    background-color: $color-type-pizza-50;
+  }
+}
