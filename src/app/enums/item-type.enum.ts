@@ -1,5 +1,5 @@
 export enum ItemTypeEnum {
-  LANDSCAPE = 1,
-  FLOWER = 2,
-  PIZZA = 3
+  LANDSCAPE = '1',
+  FLOWER = '2',
+  PIZZA = '3'
 }
