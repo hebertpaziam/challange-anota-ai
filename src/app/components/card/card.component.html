@@ -5,7 +5,8 @@
     [alt]="'image related to ' + item.title"
   />
   <app-tag [type]="item.type"></app-tag>
-  <button class="close">
+
+  <button type="button" class="close" (click)="removeItem()">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="15"

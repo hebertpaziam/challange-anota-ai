@@ -1,9 +1,12 @@
-<app-search></app-search>
+<app-search (onSearch)="searchItems($event)"></app-search>
 
 <ul class="cardlist">
-  @for (item of items; track $index) {
+  @for (item of items(); track $index) {
   <li>
-    <app-card [item]="item"></app-card>
+    <app-card [item]="item" (onRemove)="removeItem(item)"></app-card>
   </li>
+  }
+  @empty {
+    <span>Nenhum card para ser exibido</span>
   }
 </ul>

@@ -1,5 +1,5 @@
-<input type="text" class="textbox" />
-<button class="action">
+<input type="text" class="textbox" [(ngModel)]="term" (input)="performSearch()" />
+<button class="action" (click)="performSearch()">
   <svg
     class="feather feather-search"
     fill="none"
